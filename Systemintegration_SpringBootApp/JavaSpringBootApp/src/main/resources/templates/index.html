@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Data</title>
+</head>
+<body>
+<h1>Temperature Data</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Temperature</th>
+        <th>Timestamp</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="temperature : ${temperatures}">
+        <td th:text="${temperature.id}"></td>
+        <td th:text="${temperature.temp}"></td>
+        <td th:text="${temperature.datum}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
